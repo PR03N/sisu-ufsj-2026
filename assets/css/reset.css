@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+:root {
+    --brand-red: #BC1823;
+    --brand-red-light: #FF5050;
+    --brand-red-light-02: #C95A60;
+    --brand-red-dark: #780116;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #5E5C5B;
+}

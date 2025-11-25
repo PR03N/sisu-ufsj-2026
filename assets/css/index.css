@@ -1,0 +1,40 @@
+header {
+    background-color: var(--brand-red);
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logo-container span {
+    display: flex;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+header .search-container {
+    background-color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-magnifying-glass {
+    color: var(--brand-red);
+    font-size: 16px;
+}

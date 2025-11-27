@@ -136,6 +136,8 @@ main .cards-container .card {
     border-radius: 8px;
     width: 100%;
     height: 270px;
+    font-size: 32px;
+    font-weight: 700;
     background-color: var(--brand-red);
     color: var(--white);
     transition: transform 0.8s;
@@ -167,11 +169,6 @@ main .cards-container .card .card-front {
     height: 100%;
 }
 
-main .cards-container .card .card-front span {
-    font-size: 32px;
-    font-weight: 700;
-}
-
 main .cards-container .card .card-front .svg-inline--fa {
     font-size: 40px;
 }
@@ -196,7 +193,11 @@ main .cards-container .card .card-back ul {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    gap: .8rem;
+    gap: .5rem;
+}
+
+main .cards-container .card .card-back ul li {
+    display: flex;
 }
 
 main .cards-container .card .card-back ul li a {
@@ -213,6 +214,60 @@ main .cards-container .card:hover .card-back {
     display: flex;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 4rem;
+    background-color: var(--brand-red);
+}
+
+footer .adress-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1700px;
+    padding-bottom: 4rem;
+}
+
+footer .adress-container .adress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--white);
+}
+
+footer .adress-container .adress .adress-title {
+    display: flex;
+    gap: .5rem;
+    align-items: flex-start;
+    font-weight: 600;
+}
+
+footer .adress-container .adress .adress-title .svg-inline--fa {
+    font-size: 20px;
+}
+
+footer .adress-container .adress .adress-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    gap: .6rem;
+    margin-top: .6rem;
+}
+
+footer .copy {
+    border-top: 1px solid var(--black);
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--white);
+}
+
 @keyframes fade {
     from {
         opacity: .8
@@ -222,5 +277,3 @@ main .cards-container .card:hover .card-back {
         opacity: 1
     }
 }
-
-@media screen {}

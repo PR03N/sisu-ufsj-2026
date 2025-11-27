@@ -27,3 +27,16 @@ function showSlides(n) {
 setInterval(() => {
   plusSlides(1);
 }, 5000);
+
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener("click", () => {
+    plusSlides(-1);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    plusSlides(1);
+  });
+}

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.onscroll = () => {
     sections.forEach((sec) => {
       let top = window.scrollY;
-      let offset = sec.offsetTop - 200;
+      let offset = sec.offsetTop - 250;
       let height = sec.offsetHeight;
       let id = sec.getAttribute("id");
 
@@ -24,22 +24,61 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   /* --- DROPDOWN CURSOS --- */
-  const accordionHeaders = document.querySelectorAll(".accordion-header");
-  accordionHeaders.forEach((header) => {
-    header.addEventListener("click", () => {
-      const currentItem = header.parentElement;
-      const currentContent = currentItem.querySelector(".accordion-content");
-      document.querySelectorAll(".accordion-item").forEach((item) => {
-        if (item !== currentItem) {
-          item.classList.remove("active");
-          item.querySelector(".accordion-content").style.maxHeight = null;
+  /* --- 1. Lógica do PAI (Campi) --- */
+  const campusHeaders = document.querySelectorAll(".campus-header");
+  campusHeaders.forEach((header) => {
+    header.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const content = header.nextElementSibling;
+      campusHeaders.forEach((otherHeader) => {
+        if (
+          otherHeader !== header &&
+          otherHeader.classList.contains("active")
+        ) {
+          otherHeader.classList.remove("active");
+          const otherContent = otherHeader.nextElementSibling;
+          otherContent.style.maxHeight = null;
+          otherContent.style.overflow = "hidden";
         }
       });
-      currentItem.classList.toggle("active");
-      if (currentItem.classList.contains("active")) {
-        currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+      header.classList.toggle("active");
+      if (header.classList.contains("active")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        // IMPORTANTE: Deixa o overflow visível após a animação
+        // Isso permite que os filhos abram sem cortar
+        setTimeout(() => {
+          if (header.classList.contains("active")) {
+            content.style.overflow = "visible";
+            content.style.maxHeight = "none";
+          }
+        }, 500);
       } else {
-        currentContent.style.maxHeight = null;
+        content.style.overflow = "hidden";
+        content.style.maxHeight = null;
+      }
+    });
+  });
+
+  // --- 2. Lógica do FILHO (Cursos) ---
+  const courseHeaders = document.querySelectorAll(".accordion-header");
+
+  courseHeaders.forEach((header) => {
+    header.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const item = header.parentElement;
+      const content = item.querySelector(".accordion-content");
+      const parentContent = item.parentElement;
+      parentContent.querySelectorAll(".accordion-item").forEach((sibling) => {
+        if (sibling !== item && sibling.classList.contains("active")) {
+          sibling.classList.remove("active");
+          sibling.querySelector(".accordion-content").style.maxHeight = null;
+        }
+      });
+      item.classList.toggle("active");
+      if (item.classList.contains("active")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
       }
     });
   });

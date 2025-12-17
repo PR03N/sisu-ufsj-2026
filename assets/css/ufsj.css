@@ -48,6 +48,7 @@ main section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-margin-top: 210px;
 }
 
 main section h2 {
@@ -70,25 +71,46 @@ main section#cursos {
     gap: 1.5rem;
 }
 
-main section#cursos .accordion .accordion-title {
-    display: flex;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 600;
-}
-
 main section#cursos .accordion {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-main section#cursos .accordion .accordion-item {
+main section#cursos .accordion .campus-header {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--gray);
+    border-bottom: 1px solid #ddd;
+    transition: color 0.3s ease;
+    gap: .8rem;
+    padding: 1rem;
+}
+
+main section#cursos .accordion .campus-header.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+main section#cursos .accordion .campus-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+main section#cursos .accordion .campus-container .accordion-item {
     display: flex;
     flex-direction: column;
 }
 
-main section#cursos .accordion .accordion-item .accordion-header {
+main section#cursos .accordion .campus-container .accordion-item .accordion-header {
     width: 100%;
     background: none;
     border: none;
@@ -103,26 +125,26 @@ main section#cursos .accordion .accordion-item .accordion-header {
     font-size: 16px;
 }
 
-main section#cursos .accordion .accordion-item .accordion-header:hover {
+main section#cursos .accordion .campus-container .accordion-item .accordion-header:hover {
     background-color: #e0e0e0;
 }
 
-main section#cursos .accordion .accordion-item.active .accordion-header span {
+main section#cursos .accordion .campus-container .accordion-item.active .accordion-header span {
     font-weight: 500;
 }
 
-main section#cursos .accordion .accordion-item.active .accordion-header .fa-chevron-down {
+main section#cursos .accordion .campus-container .accordion-item.active .accordion-header .fa-chevron-down {
     transform: rotate(180deg);
 }
 
-main section#cursos .accordion .accordion-item .accordion-content {
+main section#cursos .accordion .campus-container .accordion-item .accordion-content {
     padding: 0 1rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
 }
 
-main section#cursos .accordion .accordion-item .accordion-content .content-body {
+main section#cursos .accordion .campus-container .accordion-item .accordion-content .content-body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

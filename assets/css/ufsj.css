@@ -49,6 +49,7 @@ main section {
     align-items: center;
     justify-content: center;
     scroll-margin-top: 210px;
+    gap: 1.5rem;
 }
 
 main section h2 {
@@ -56,19 +57,10 @@ main section h2 {
     color: var(--brand-red);
 }
 
-main section#ufsj {
-    gap: 1.5rem;
-}
-
 main section#ufsj span {
     text-align: justify;
     font-size: 24px;
     font-weight: 300;
-}
-
-main section#cursos {
-    display: flex;
-    gap: 1.5rem;
 }
 
 main section#cursos .accordion {

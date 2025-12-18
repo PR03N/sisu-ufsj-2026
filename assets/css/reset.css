@@ -16,6 +16,26 @@ body {
     padding-top: 164px;
 }
 
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+:root {
+    --brand-red: #BC1823;
+    --brand-red-light: #FF5050;
+    --brand-red-light-02: #C95A60;
+    --brand-red-dark: #780116;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #5E5C5B;
+}
+
 header {
     background-color: var(--brand-red);
     padding: 2rem 4rem;
@@ -102,22 +122,56 @@ header .search-container .fa-magnifying-glass {
     transition: transform 0.3s;
 }
 
-a {
-    text-decoration: none;
-    list-style: none;
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 4rem;
+    background-color: var(--brand-red);
 }
 
-ul,
-ol {
-    list-style: none;
+footer .adress-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1700px;
+    padding-bottom: 4rem;
 }
 
-:root {
-    --brand-red: #BC1823;
-    --brand-red-light: #FF5050;
-    --brand-red-light-02: #C95A60;
-    --brand-red-dark: #780116;
-    --black: #000000;
-    --white: #FFFFFF;
-    --gray: #5E5C5B;
+footer .adress-container .adress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--white);
+}
+
+footer .adress-container .adress .adress-title {
+    display: flex;
+    gap: .5rem;
+    align-items: flex-start;
+    font-weight: 600;
+}
+
+footer .adress-container .adress .adress-title .svg-inline--fa {
+    font-size: 20px;
+}
+
+footer .adress-container .adress .adress-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    gap: .6rem;
+    margin-top: .6rem;
+}
+
+footer .copy {
+    border-top: 1px solid var(--black);
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--white);
 }

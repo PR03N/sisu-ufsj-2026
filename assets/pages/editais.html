@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <script type="module" src="./assets/js/index.js" defer></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/editais.css">
+    <script src="../js/index.js"></script>
     <script src="https://kit.fontawesome.com/f93b46158f.js" crossorigin="anonymous"></script>
     <title>SISU 2026 da UFSJ</title>
 </head>
@@ -19,88 +19,27 @@
 <body>
     <header>
         <div class="logo-container">
-            <a href="./index.html"><img src="./assets/images/logo_ufsj_branca.png" alt="Logo da UFSJ branca"></a>
+            <a href="../../index.html"><img src="../images/logo_ufsj_branca.png" alt="Logo da UFSJ branca"></a>
             <span>Universidade Federal de <br /> São João del-Rei</span>
         </div>
 
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="O que você procura?">
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Início</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="O que você procura?">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="news-slider">
-            <div class="slider-container">
-                <div class="slide fade">
-                    <img src="https://picsum.photos/1920/400?random=1" alt="Notícia 1">
-                    <div class="slide-content">
-                        <h2>Processo Seletivo Aberto</h2>
-                        <p>Confira as novas vagas para o SISU 2026.</p>
-                    </div>
-                </div>
-                <div class="slide fade">
-                    <img src="https://picsum.photos/1920/400?random=2" alt="Notícia 2">
-                    <div class="slide-content">
-                        <h2>Retorno às Aulas</h2>
-                        <p>Veja o calendário acadêmico atualizado.</p>
-                    </div>
-                </div>
-                <div class="slide fade">
-                    <img src="https://picsum.photos/1920/400?random=3" alt="Notícia 3">
-                    <div class="slide-content">
-                        <h2>Pesquisa e Inovação</h2>
-                        <p>UFSJ se destaca em ranking nacional.</p>
-                    </div>
-                </div>
-
-                <button class="prev-btn">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="next-btn">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-            </div>
-        </section>
-
-        <section class="cards-grid">
-            <div class="cards-container">
-                <a href="./assets/pages/ufsj.html" class="card">
-                    <i class="fa-solid fa-hotel"></i>
-                    <span>A UFSJ</span>
-                </a>
-                <a href="./assets/pages/editais.html" class="card card-light">
-                    <i class="fa-solid fa-book-open"></i>
-                    <span>EDITAIS</span>
-                </a>
-                <a href="#" class="card">
-                    <i class="fa-solid fa-calendar-alt"></i>
-                    <span>DATAS</span>
-                </a>
-                <a href="#" class="card card-light">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>MATRÍCULA</span>
-                </a>
-                <a href="#" class="card card-light">
-                    <i class="fa-solid fa-fist-raised"></i>
-                    <span>COTAS</span>
-                </a>
-                <a href="#" class="card">
-                    <i class="fa-solid fa-user-graduate"></i>
-                    <span>ASSISTÊNCIA ESTUDANTIL</span>
-                </a>
-                <a href="#" class="card card-light">
-                    <i class="fa-solid fa-question-circle"></i>
-                    <span>PERGUNTAS FREQUENTES</span>
-                </a>
-                <a href="#" class="card">
-                    <i class="fa-solid fa-comment-dots"></i>
-                    <span>SAIBA MAIS</span>
-                </a>
-            </div>
-        </section>
+        <h2>EDITAIS</h2>
     </main>
 
     <footer>

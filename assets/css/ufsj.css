@@ -56,7 +56,7 @@ main section#cursos .accordion .campus-header.active .fa-chevron-down {
 main section#cursos .accordion .campus-container {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
+    transition: max-height 0.3s ease-out;
 }
 
 main section#cursos .accordion .campus-container .accordion-item {
@@ -95,7 +95,7 @@ main section#cursos .accordion .campus-container .accordion-item .accordion-cont
     padding: 0 1rem;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
+    transition: max-height 0.3s ease-out;
 }
 
 main section#cursos .accordion .campus-container .accordion-item .accordion-content .content-body {

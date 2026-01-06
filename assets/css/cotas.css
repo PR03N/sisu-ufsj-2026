@@ -1,0 +1,84 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+
+main .main-header {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .main-header h2 {
+    text-align: center;
+}
+
+main .main-header span {
+    font-size: 20px;
+    text-align: justify;
+}
+
+main .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 80%;
+    margin: 3rem 1rem;
+}
+
+main .cards-container .secondary-cards-container {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .cards-container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 330px;
+    height: 630px;
+    gap: 1rem;
+}
+
+main .cards-container .card .card-header {
+    text-align: center;
+    color: var(--black);
+    text-align: center;
+    min-height: 85px;
+    width: 60%;
+}
+
+main .cards-container .card .card-header h3 {
+    font-size: 32px;
+}
+
+main .cards-container .card .card-header h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+main .cards-container .card .card-body {
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--brand-red);
+}
+
+main .cards-container .card .card-body.card-light {
+    background-color: var(--brand-red-light-02);
+}
+
+main .cards-container .card .card-body p {
+    font-size: 20px;
+    color: var(--white);
+    text-align: justify;
+    font-weight: 300;
+}

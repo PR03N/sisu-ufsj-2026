@@ -36,6 +36,11 @@ ol {
     --gray: #5E5C5B;
 }
 
+main h2 {
+    font-size: 64px;
+    color: var(--brand-red);
+}
+
 header {
     background-color: var(--brand-red);
     padding: 2rem 4rem;

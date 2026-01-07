@@ -82,6 +82,69 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  /* --- CRONOGRAMA --- */
+  // lÓGICA DO COMPORTAMENTO DO CRONOGRAMA COMO UM TODO
+  const btns = document.querySelectorAll(".month-btn");
+  const contents = document.querySelectorAll(".month-content");
+
+  let currentIndex = 0;
+  let isAnimating = false;
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      if (isAnimating) return;
+
+      const targetIndex = parseInt(this.getAttribute("data-index"));
+
+      if (targetIndex === currentIndex) return;
+
+      isAnimating = true;
+
+      const currentContent = contents[currentIndex];
+      const targetContent = contents[targetIndex];
+
+      btns.forEach((b) => b.classList.remove("active"));
+      this.classList.add("active");
+
+      contents.forEach((c) => {
+        c.classList.remove(
+          "anim-enter-left",
+          "anim-exit-right",
+          "anim-enter-right",
+          "anim-exit-left"
+        );
+        if (c === targetContent) {
+          c.classList.add("active");
+          c.style.visibility = "visible";
+          c.style.opacity = "1";
+        }
+      });
+
+      // Classes do CSS que serão aplicadas
+      if (targetIndex > currentIndex) {
+        currentContent.classList.add("anim-exit-left");
+        targetContent.classList.add("anim-enter-right");
+      } else {
+        currentContent.classList.add("anim-exit-right");
+        targetContent.classList.add("anim-enter-left");
+      }
+
+      currentIndex = targetIndex;
+
+      setTimeout(() => {
+        currentContent.classList.remove(
+          "active",
+          "anim-exit-right",
+          "anim-exit-left"
+        );
+        currentContent.style.visibility = "";
+        currentContent.style.opacity = "";
+
+        isAnimating = false;
+      }, 600);
+    });
+  });
 });
 
 /* --- INDEX --- */

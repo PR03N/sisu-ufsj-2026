@@ -1,0 +1,177 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+
+main .months-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    padding: 2rem;
+}
+
+main .months-nav .month-btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem;
+    border: none;
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+main .months-nav .month-btn:nth-child(odd) {
+    background-color: var(--brand-red);
+}
+
+main .months-nav .month-btn:nth-child(even) {
+    background-color: var(--brand-red-light-02);
+}
+
+main .months-nav .month-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+main .months-nav .month-btn.active {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+main .schedule-container {
+    position: relative;
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main .schedule-container .month-content {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: none;
+}
+
+main .schedule-container .month-content.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    z-index: 1;
+}
+
+main .schedule-container .month-content .month-title {
+    text-align: center;
+    color: var(--brand-red);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+main .schedule-container .month-content .events-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+main .schedule-container .month-content .events-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+main .schedule-container .month-content .events-list li custom-date {
+    color: var(--brand-red);
+}
+
+main .schedule-container .month-content .events-list li .icon-green {
+    color: #28a745;
+    font-size: 1.1rem;
+}
+
+main .schedule-container .month-content .events-list li .icon-grey {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+/* --- ANIMAÇÕES (A Lógica "User Physics") --- */
+/* 1. Mover para o próximo mês (User pediu: Entra da Esquerda, Sai pela Direita) */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* 2. Mover para o mês anterior (User pediu: Lado contrário -> Entra da Direita, Sai pela Esquerda) */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Classes que serão aplicadas pelo JS */
+.anim-enter-left {
+    animation: slideInFromLeft 0.6s ease forwards;
+    z-index: 2;
+}
+
+.anim-exit-right {
+    animation: slideOutToRight 0.6s ease forwards;
+    z-index: 1;
+}
+
+.anim-enter-right {
+    animation: slideInFromRight 0.6s ease forwards;
+    z-index: 2;
+}
+
+.anim-exit-left {
+    animation: slideOutToLeft 0.6s ease forwards;
+    z-index: 1;
+}

@@ -70,6 +70,7 @@ main .cards-container .card .card-body {
     display: flex;
     align-items: flex-start;
     background-color: var(--brand-red);
+    border-radius: 8px;
 }
 
 main .cards-container .card .card-body.card-light {

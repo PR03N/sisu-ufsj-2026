@@ -145,6 +145,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 600);
     });
   });
+
+  /* --- ASSISTÊNCIA ESTUDANTIL --- */
+  const track = document.getElementById("carousel-track");
+  const btnPrev = document.getElementById("btn-prev");
+  const btnNext = document.getElementById("btn-next");
+
+  // Lógica do botão para fazer o scroll
+  // Largura do scroll = Tamanho do Card (320px) + Gap (20px)
+  const scrollAmount = 340;
+
+  if (track && btnPrev && btnNext) {
+    btnNext.addEventListener("click", () => {
+      track.scrollLeft += scrollAmount;
+    });
+
+    btnPrev.addEventListener("click", () => {
+      track.scrollLeft -= scrollAmount;
+    });
+  }
 });
 
 /* --- INDEX --- */

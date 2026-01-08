@@ -1,0 +1,114 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+
+main .faq-section {
+    padding: 4rem;
+    width: 100%;
+}
+
+main .faq-section .faq-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--brand-red);
+}
+
+main .faq-section .faq-tabs .tab-btn {
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 8px 8px 0 0;
+    outline: none;
+}
+
+main .faq-section .faq-tabs .tab-btn:hover {
+    color: var(--brand-red);
+    background-color: #fff0f0;
+}
+
+main .faq-section .faq-tabs .tab-btn.active {
+    background-color: var(--brand-red);
+    color: var(--white);
+}
+
+main .faq-section .faq-container {
+    display: flex;
+    flex-direction: column;
+}
+
+main .faq-section .faq-container .faq-group {
+    display: none;
+    gap: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+main .faq-section .faq-container .faq-group.active {
+    display: flex;
+    flex-direction: column;
+}
+
+main .faq-section .faq-container .faq-group .accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+main .faq-section .faq-container .faq-group .accordion-item .accordion-header {
+    width: 100%;
+    color: var(--black);
+    border: none;
+    padding: 1.2rem;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+}
+
+main .faq-section .faq-container .faq-group .accordion-item .accordion-header:hover {
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    color: var(--brand-red);
+}
+
+main .faq-section .faq-container .faq-group .accordion-item .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+main .faq-section .faq-container .faq-group .accordion-item .accordion-content .content-body {
+    padding: 1.5rem;
+    color: var(--black);
+}
+
+main .faq-section .faq-container .faq-group .accordion-item .accordion-content .content-body ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

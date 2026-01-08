@@ -164,6 +164,26 @@ document.addEventListener("DOMContentLoaded", function () {
       track.scrollLeft -= scrollAmount;
     });
   }
+
+  const tabs = document.querySelectorAll(".tab-btn");
+  const groups = document.querySelectorAll(".faq-group");
+
+  if (tabs.length > 0) {
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        // Remove ativo de todos
+        tabs.forEach((t) => t.classList.remove("active"));
+        groups.forEach((g) => g.classList.remove("active"));
+
+        // Ativa o clicado
+        tab.classList.add("active");
+
+        // Mostra o grupo correspondente
+        const category = tab.getAttribute("data-category");
+        document.getElementById(category).classList.add("active");
+      });
+    });
+  }
 });
 
 /* --- INDEX --- */

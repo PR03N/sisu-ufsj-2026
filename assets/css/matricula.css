@@ -1,0 +1,137 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 4rem;
+    gap: 2rem;
+}
+
+main .main-header {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .main-header h2 {
+    text-align: center;
+}
+
+main .main-header span {
+    font-size: 20px;
+    text-align: justify;
+}
+
+main .main-header span strong {
+    color: var(--brand-red);
+}
+
+main .matricula-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+main .matricula-grid .video-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .matricula-grid .video-wrapper .video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+main .matricula-grid .video-wrapper .video-frame .video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main .matricula-grid .video-wrapper .video-caption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
+main .pdf-wrapper .pdf-card-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--brand-red), var(--brand-red-dark));
+    color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(188, 24, 35, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+main .pdf-wrapper .pdf-card-action {
+    animation: pulse-shadow 2s infinite;
+}
+
+main .pdf-wrapper .pdf-card-action:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(188, 24, 35, 0.4);
+    animation: none;
+}
+
+main .pdf-wrapper .pdf-card-action .pdf-text-content h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+main .pdf-wrapper .pdf-card-action .pdf-text-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+main .pdf-wrapper .pdf-card-action .pdf-text-content .cta-fake-button {
+    background-color: var(--white);
+    color: var(--brand-red);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@media (max-width: 900px) {
+    main .matricula-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animação de "Pulso" contínuo */
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(188, 24, 35, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(188, 24, 35, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(188, 24, 35, 0);
+    }
+}

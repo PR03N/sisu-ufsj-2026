@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <script type="module" src="./assets/js/index.js" defer></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/matricula.css">
+    <script src="../js/index.js"></script>
     <script src="https://kit.fontawesome.com/f93b46158f.js" crossorigin="anonymous"></script>
     <title>SISU 2026 da UFSJ</title>
 </head>
@@ -19,88 +19,65 @@
 <body>
     <header>
         <div class="logo-container">
-            <a href="./index.html"><img src="./assets/images/logo_ufsj_branca.png" alt="Logo da UFSJ branca"></a>
+            <a href="../../index.html"><img src="../images/logo_ufsj_branca.png" alt="Logo da UFSJ branca"></a>
             <span>Universidade Federal de <br /> São João del-Rei</span>
         </div>
 
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="O que você procura?">
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Início</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="O que você procura?">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="news-slider">
-            <div class="slider-container">
-                <div class="slide fade">
-                    <img src="https://picsum.photos/1920/400?random=1" alt="Notícia 1">
-                    <div class="slide-content">
-                        <h2>Processo Seletivo Aberto</h2>
-                        <p>Confira as novas vagas para o SISU 2026.</p>
-                    </div>
-                </div>
-                <div class="slide fade">
-                    <img src="https://picsum.photos/1920/400?random=2" alt="Notícia 2">
-                    <div class="slide-content">
-                        <h2>Retorno às Aulas</h2>
-                        <p>Veja o calendário acadêmico atualizado.</p>
-                    </div>
-                </div>
-                <div class="slide fade">
-                    <img src="https://picsum.photos/1920/400?random=3" alt="Notícia 3">
-                    <div class="slide-content">
-                        <h2>Pesquisa e Inovação</h2>
-                        <p>UFSJ se destaca em ranking nacional.</p>
-                    </div>
-                </div>
+        <div class="main-header">
+            <h2>MATRÍCULA</h2>
+            <span>
+                Parabéns pela sua aprovação! A matrícula na UFSJ é a etapa final para garantir a sua vaga.
+                Todo o processo é realizado de forma <strong>online</strong> através do Sistema Integrado de
+                Processos Seletivos (SIGPS).
+                Para auxiliar neste processo, preparamos um vídeo explicativo e um manual detalhado com o passo
+                a passo.
+                Fique atento aos prazos do cronograma!
+            </span>
+        </div>
 
-                <button class="prev-btn">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="next-btn">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
+        <div class="matricula-grid">
+            <div class="video-wrapper">
+                <div class="video-frame">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj2hydyoOew?si=FE1NjANfU4RYOrpD"
+                        title="Tutorial de Matrícula UFSJ" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <span class="video-caption">Assista ao tutorial completo de acesso ao SIGPS</span>
             </div>
-        </section>
 
-        <section class="cards-grid">
-            <div class="cards-container">
-                <a href="./assets/pages/ufsj.html" class="card">
-                    <i class="fa-solid fa-hotel"></i>
-                    <span>A UFSJ</span>
-                </a>
-                <a href="./assets/pages/editais.html" class="card card-light">
-                    <i class="fa-solid fa-book-open"></i>
-                    <span>EDITAIS</span>
-                </a>
-                <a href="./assets/pages/cronograma.html" class="card">
-                    <i class="fa-solid fa-calendar-alt"></i>
-                    <span>DATAS</span>
-                </a>
-                <a href="./assets/pages/matricula.html" class="card card-light">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>MATRÍCULA</span>
-                </a>
-                <a href="./assets/pages/cotas.html" class="card card-light">
-                    <i class="fa-solid fa-fist-raised"></i>
-                    <span>COTAS</span>
-                </a>
-                <a href="./assets/pages/assistencia_estudantil.html" class="card">
-                    <i class="fa-solid fa-user-graduate"></i>
-                    <span>ASSISTÊNCIA ESTUDANTIL</span>
-                </a>
-                <a href="./assets/pages/perguntas_frequentes.html" class="card card-light">
-                    <i class="fa-solid fa-question-circle"></i>
-                    <span>PERGUNTAS FREQUENTES</span>
-                </a>
-                <a href="https://ufsj.edu.br/" target="_blank" class="card">
-                    <i class="fa-solid fa-comment-dots"></i>
-                    <span>SAIBA MAIS</span>
+            <div class="pdf-wrapper">
+                <a href="https://ufsj.edu.br/portal2-repositorio/File/vestibular/PS2025_1/SISU_2025/Chamadas%202025_1/Orientacoes_SIGPS_SISU.pdf"
+                    target="_blank" class="pdf-card-action">
+                    <div class="pdf-icon-box">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                    </div>
+                    <div class="pdf-text-content">
+                        <h3>BAIXAR MANUAL</h3>
+                        <p>Passo a passo da Matrícula (PDF)</p>
+                        <span class="cta-fake-button">CLIQUE PARA BAIXAR</span>
+                    </div>
                 </a>
             </div>
-        </section>
+
+        </div>
     </main>
 
     <footer>

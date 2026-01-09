@@ -98,7 +98,11 @@ main .faq-section .faq-container .faq-group .accordion-item .accordion-content .
 
 main .faq-section .faq-container .faq-group .accordion-item .accordion-content .content-body ul {
     list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding-left: 20px;
+    margin: 5px 5px;
 }
 
 @keyframes fadeIn {

@@ -106,3 +106,72 @@ main section#cursos .accordion .campus-container .accordion-item .accordion-cont
     line-height: 1.6;
     text-align: justify;
 }
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1440px) {
+    main section#mapa {
+        width: 100%;
+        padding: 0;
+    }
+
+    main section#mapa iframe {
+        width: 90% !important;
+        height: 800px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    main section#mapa {
+        width: 100%;
+        padding: 0;
+    }
+
+    main section#mapa iframe {
+        width: 100% !important;
+        height: 700px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        padding: 40px 15px;
+        gap: 2rem;
+    }
+
+    main section h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    main section#ufsj span {
+        font-size: 16px;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    main section#cursos .accordion .campus-header {
+        font-size: 18px;
+        padding: 1rem 0;
+        text-align: left;
+    }
+
+    main section#cursos .accordion .campus-container .accordion-item .accordion-header {
+        font-size: 15px;
+        padding: 0.8rem 0.5rem;
+    }
+
+    main section#cursos .accordion .campus-container .accordion-item .accordion-content .content-body {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    main section#mapa {
+        width: 100%;
+        padding: 0;
+    }
+
+    main section#mapa iframe {
+        width: 100% !important;
+        height: 400px !important;
+    }
+}

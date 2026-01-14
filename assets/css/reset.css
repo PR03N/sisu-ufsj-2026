@@ -218,6 +218,11 @@ footer .copy {
         display: none;
     }
 
+    main h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
     footer .adress-container {
         grid-template-columns: 1fr;
         padding: 0 2rem 2rem 2rem;

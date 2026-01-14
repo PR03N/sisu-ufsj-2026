@@ -50,7 +50,7 @@ main .matricula-grid .video-wrapper .video-frame {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-main .matricula-grid .video-wrapper .video-frame .video-frame iframe {
+main .matricula-grid .video-wrapper .video-frame iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -105,6 +105,9 @@ main .pdf-wrapper .pdf-card-action .pdf-text-content p {
 }
 
 main .pdf-wrapper .pdf-card-action .pdf-text-content .cta-fake-button {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 100%;
     background-color: var(--white);
     color: var(--brand-red);
     padding: 10px 25px;
@@ -118,6 +121,14 @@ main .pdf-wrapper .pdf-card-action .pdf-text-content .cta-fake-button {
 @media (max-width: 900px) {
     main .matricula-grid {
         grid-template-columns: 1fr;
+    }
+
+    main .pdf-wrapper .pdf-card-action {
+        padding: 2rem 1.5rem;
+    }
+
+    main .pdf-wrapper .pdf-card-action .pdf-text-content h3 {
+        font-size: 1.5rem;
     }
 }
 

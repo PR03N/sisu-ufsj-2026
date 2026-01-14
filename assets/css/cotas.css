@@ -84,3 +84,49 @@ main .cards-container .card .card-body p {
     text-align: justify;
     font-weight: 300;
 }
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    main {
+        padding: 40px 15px;
+    }
+
+    main .main-header {
+        width: 100%;
+    }
+
+    main .cards-container {
+        width: 100%;
+        margin: 2rem 0;
+        gap: 2rem;
+    }
+
+    main .cards-container .secondary-cards-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    main .cards-container .card {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 250px;
+    }
+
+    main .cards-container .card .card-body {
+        height: auto;
+    }
+
+    main .cards-container .card:nth-child(odd) .card-body {
+        background-color: var(--brand-red) !important;
+    }
+
+    main .cards-container .card:nth-child(odd) .card-header {
+        color: var(--black) !important;
+    }
+
+    main .cards-container .card:nth-child(even) .card-body {
+        background-color: var(--brand-red-light-02) !important;
+    }
+}

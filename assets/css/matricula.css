@@ -27,6 +27,14 @@ main .main-header span strong {
     color: var(--brand-red);
 }
 
+main .main-header span a {
+    color: var(--brand-red);
+}
+
+main .main-header span a:hover {
+    text-decoration: underline;
+}
+
 main .matricula-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr;

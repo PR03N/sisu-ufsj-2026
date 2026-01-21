@@ -81,11 +81,39 @@ main .cards-container .card .card-body.card-light {
 main .cards-container .card .card-body p {
     font-size: 20px;
     color: var(--white);
-    text-align: justify;
+    text-align: start;
     font-weight: 300;
 }
 
 /* --- RESPONSIVIDADE --- */
+@media (min-width: 901px) and (max-width: 1670px) {
+    main .cards-container .secondary-cards-container {
+        max-width: 760px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    main .cards-container .secondary-cards-container:nth-of-type(n+2) .card:nth-child(1) .card-body {
+        background-color: var(--brand-red-light-02) !important;
+        color: var(--white) !important;
+    }
+
+    main .cards-container .secondary-cards-container:nth-of-type(n+2) .card:nth-child(2) .card-body {
+        background-color: var(--brand-red) !important;
+        color: var(--white) !important;
+    }
+
+    main .cards-container .secondary-cards-container:nth-of-type(n+2) .card:nth-child(3) .card-body {
+        background-color: var(--brand-red) !important;
+        color: var(--white) !important;
+    }
+
+    main .cards-container .secondary-cards-container:nth-of-type(n+2) .card:nth-child(4) .card-body {
+        background-color: var(--brand-red-light-02) !important;
+        color: var(--white) !important;
+    }
+}
+
 @media (max-width: 900px) {
     main {
         padding: 40px 15px;
@@ -122,9 +150,6 @@ main .cards-container .card .card-body p {
         background-color: var(--brand-red) !important;
     }
 
-    main .cards-container .card:nth-child(odd) .card-header {
-        color: var(--black) !important;
-    }
 
     main .cards-container .card:nth-child(even) .card-body {
         background-color: var(--brand-red-light-02) !important;

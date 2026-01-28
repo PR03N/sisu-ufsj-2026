@@ -23,20 +23,6 @@ main .news-slider .slider-container .slide img {
     filter: brightness(0.7);
 }
 
-main .news-slider .slider-container .slide .slide-content {
-    position: absolute;
-    bottom: 50px;
-    left: 70px;
-    color: var(--white);
-    max-width: 600px;
-}
-
-main .news-slider .slider-container .slide .slide-content h2 {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
 main .news-slider .slider-container .fade {
     animation-name: fade;
     animation-duration: .8s;

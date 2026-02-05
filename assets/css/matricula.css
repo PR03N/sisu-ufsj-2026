@@ -36,10 +36,9 @@ main .main-header span a:hover {
 }
 
 main .matricula-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 main .matricula-grid .video-wrapper {

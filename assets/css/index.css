@@ -56,6 +56,18 @@ main .news-slider .slider-container .next-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+main .alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 4rem;
+}
+
+main .alert p {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
 main .cards-grid {
     display: flex;
     align-items: center;

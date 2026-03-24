@@ -1,0 +1,30 @@
+name: Deploy Estatico UFSJ
+
+on:
+  push:
+    branches:
+      - main # Branch principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Pegando os arquivos do repositório
+        uses: actions/checkout@v4
+
+      - name: 🚀 Enviando via SFTP
+        uses: Dylan700/sftp-upload-action@latest
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PWD }}
+          port: 32000
+          uploads: |
+            ./ => /upload/
+          ignore: | # Arquivos que serão ignorados no upload
+            *.git
+            */**/*git*
+            *.github
+            LICENSE
+            README.md
+            .sftp_upload_action_hashes
